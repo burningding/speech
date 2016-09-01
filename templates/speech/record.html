@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>Record</title>
+    <link type="text/css" rel="stylesheet" href="{% static "css/stylesheet.css" %}"/>
+</head>
+
+<body>
+<h1>Record</h1>
+<a href="/speech/">Index</a><br />
+<div class="PhoneTable">
+    <table border="1">
+        <tr>
+            <th rowspan="2"></th>
+            <th rowspan="2" colspan="2">MANNER</th>
+            <th rowspan="2">VOICING</th>
+            <th colspan="7">PLACE</th>
+        </tr>
+        <tr>
+            <th>Bilabial</th>
+            <th>Labiodental</th>
+            <th>Interdental</th>
+            <th>Alveolar</th>
+            <th>Palatal</th>
+            <th>Velar</th>
+            <th>Glottal</th>
+        </tr>
+        <tr>
+            <th rowspan="6">OBSTRUENTS</th>
+            <th rowspan="2" colspan="2">Stop</th>
+            <th>Unvoiced</th>
+            <!--first row-->
+        </tr>
+        <tr>
+            <th>Voiced</th>
+            <!--Second row-->
+        </tr>
+        <tr>
+            <th rowspan="2" colspan="2">Fricative</th>
+            <th>Unvoiced</th>
+            <!--Third row-->
+        </tr>
+        <tr>
+            <th>Voiced</th>
+            <!--Fourth row-->
+        </tr>
+        <tr>
+            <th rowspan="2" colspan="2">Affricate</th>
+            <th>Unvoiced</th>
+            <!--Fifth row-->
+        </tr>
+        <tr>
+            <th>Voiced</th>
+            <!--Sixth row-->
+        </tr>
+        <tr>
+            <th rowspan="4">SONORANTS</th>
+            <th colspan="2">Nasal</th>
+            <th>Voiced</th>
+            <!--Seventh row-->
+        </tr>
+        <tr>
+            <th rowspan="2">Liquid</th>
+            <th>Lateral</th>
+            <th>Voiced</th>
+            <!--Eighth row-->
+        </tr>
+        <tr>
+            <th>Rhotic</th>
+            <th>Voiced</th>
+            <!--Nineth row-->
+        </tr>
+        <tr>
+            <th colspan="2">Glide</th>
+            <th>Voiced</th>
+            <!--Nineth row-->
+        </tr>
+    </table>
+</div>
+<div id="Information">
+    <h1>Information</h1>
+    <div id="Animation">
+        <img src="{% static "images/rango.jpg" %}" alt="animation" />
+    </div>
+    <div id="InfoText">
+        <p>{{ infotext }}</p>
+    </div>
+</div>
+<div id="SoundRecorder">
+    <h1>Sound Recorder</h1>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+#Animation {
+	height: 300px;
+	width: 25%;
+	/*border: 2px solid black;*/
+	/*border-radius: 5px;*/
+	background-color: #bce8f1;
+	float: left;
+	/*Add your CSS here!*/
+}
+
+
+#InfoText {
+	height: 300px;
+	width: 70%;
+	/*border: 2px solid black;*/
+	/*border-radius: 5px;*/
+	background-color: #bce8f1;
+	float: right;
+	/*Add your CSS here!*/
+}
+
+#SoundRecorder {
+    clear: both;
+}
