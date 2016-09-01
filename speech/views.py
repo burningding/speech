@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 #from django_auth0.auth_backend import Auth0Backend
 #from django_auth0.auth_helpers import process_login
 
@@ -10,10 +11,9 @@ def index(request):
     #    context_dict = {'boldmessage': "Authenticate!"}
     #else:
     #    context_dict = {'boldmessage': "I am bold font from the context"}
-
-    if request.session._session.get('profile'):
-        profile = request.session._session['profile']
-        context_dict = {'boldmessage': profile['name']}
+    if 'profile' in request.session:
+        user = request.session['profile']
+        context_dict = {'boldmessage': user['name']}
     else:
         context_dict = {'boldmessage': "Hello"}
     return render(request, 'speech/index.html', context_dict)
