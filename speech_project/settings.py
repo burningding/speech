@@ -142,3 +142,5 @@ AUTH0_SECRET = 'Gdchw6JMGrOyRkMwre1IIYm2XYshOn9iXaN_av-2hNjGoZLUP0eUvibV9BW871_W
 AUTH0_DOMAIN = 'shjd.auth0.com'
 
 AUTH0_SUCCESS_URL = '/speech/'
+
+LOGIN_URL = '/auth/login/'

@@ -16,6 +16,7 @@ class Auth0Backend(object):
         """
         email = kwargs.pop('email')
         username = kwargs.pop('nickname')
+        print email, username
 
         if username and email:
             try:

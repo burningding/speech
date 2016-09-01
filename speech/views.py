@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
 #from django_auth0.auth_backend import Auth0Backend
@@ -18,6 +19,7 @@ def index(request):
         context_dict = {'boldmessage': "Hello"}
     return render(request, 'speech/index.html', context_dict)
 
+@login_required()
 def record(request):
     infotext = "The voiced dental fricative is pronounced with the tip of the tongue against the teeth, while your glottis vibrates. This is a rare sound that does not exist in most European and Asian languages"
     context_dict = {'infotext': infotext}

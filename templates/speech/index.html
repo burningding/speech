@@ -4,25 +4,13 @@
 
 <head>
     <title>Index</title>
-    <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
-    <script type="text/javascript">
-        var lock = new Auth0Lock('GfnvKP8rFiGCaBXauuNEulqY8EapxJmp', 'shjd.auth0.com', {
-            auth: {
-                redirectUrl: 'http://127.0.0.1:8000/auth/callback/?',
-                responseType: 'code',
-                params: {
-                    scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
-                }
-            }
-        });
-    </script>
 </head>
 
 <body>
 <h1>Rango says...</h1>
 hello world! <strong>{{ boldmessage }}</strong><br/>
 <a href="/auth/logout/">Logout</a><br/>
-<a onclick="lock.show();">Login</a><br/>
+<a href="/auth/login/">Login</a><br/>
 <a href="/speech/record/">Record</a><br/>
 <a href="/speech/annotate/">Annotate</a><br/>
 <a href="/speech/build/">Build</a><br/>

@@ -42,17 +42,17 @@ def process_login(request):
 
     # We're saving all user information into the session
     request.session['profile'] = user_info
-    return redirect('/speech/')
-    #index(request)
-    # return redirect('/speech')
-    # auth0backend = Auth0Backend()
-    # user = auth0backend.authenticate(**user_info)
-    #
-    # if user:
-    #     login(request, user)
-    #     return redirect(config['AUTH0_SUCCESS_URL'])
-    #
-    # return HttpResponse(status=400)
+    #return redirect('/speech/')
+    print user_info
+    user = authenticate(**user_info)
+    print user
+    if user:
+        login(request, user)
+        return redirect('/speech/')
+
+    return HttpResponse(status=400)
+
+
 
 # def is_login(request):
 #     if request.session._session.get('profile'):
@@ -60,7 +60,7 @@ def process_login(request):
 #     else:
 #         return None
 
-def process_logout(request):
-    user = request.session.pop('profile')
-    client_id = user['clientID']
-    return redirect('https://shjd.auth0.com/v2/logout?returnTo=http://127.0.0.1:8000/speech/&client_id={}'.format(client_id))
+# def process_logout(request):
+#     user = request.session.pop('profile')
+#     client_id = user['clientID']
+#     return redirect('https://shjd.auth0.com/v2/logout?returnTo=http://127.0.0.1:8000/speech/&client_id={}'.format(client_id))
